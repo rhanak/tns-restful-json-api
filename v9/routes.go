@@ -18,6 +18,12 @@ var routes = Routes{
 		"/",
 		Index,
 	},
+        Route{
+		"ServerInfo",
+		"GET",
+		"/info",
+		ServerInfo,
+	},
 	Route{
 		"TodoIndex",
 		"GET",

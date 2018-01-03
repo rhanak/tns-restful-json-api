@@ -7,12 +7,17 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strconv"
-
+        "os"
 	"github.com/gorilla/mux"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Welcome!\n")
+}
+
+func ServerInfo(w http.ResponseWriter, r *http.Request) {
+        host, _ := os.Hostname()
+	fmt.Fprint(w, host)
 }
 
 func TodoIndex(w http.ResponseWriter, r *http.Request) {
